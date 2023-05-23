@@ -1,0 +1,44 @@
+.background {
+  width: 100%;
+  height: 100vh;
+
+  z-index: -2;
+  position: fixed;
+  background-attachment: fixed;
+
+  overflow: hidden;
+
+  &.background:after {
+    background: url('../../assets/bg-header.jpg') center no-repeat;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    animation: anim 15s linear infinite;
+
+    @keyframes anim {
+      0% {
+        transform: scale(1.2);
+      }
+      50% {
+        min-height: 100vh;
+        form: scale(1.2);
+      }
+    }
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+
+  background-attachment: fixed;
+
+  position: fixed;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: -1;
+}

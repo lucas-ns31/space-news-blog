@@ -1,0 +1,52 @@
+.post {
+  padding: 4rem;
+
+  margin: 3rem auto;
+  max-width: 1280px;
+
+  border-radius: 1rem;
+
+  background: rgba($color: #000, $alpha: 0.5);
+  color: white;
+
+  display: inline-flex;
+  align-items: center;
+
+  .contentPost {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    width: 50%;
+
+    margin: 0 3rem;
+
+    .descriptionPost {
+      font-weight: 600;
+      font-size: 3rem;
+
+      flex-shrink: 3;
+
+      letter-spacing: 1px;
+    }
+
+    .explanationPost {
+      margin-top: 4rem;
+
+      text-indent: 3rem;
+    }
+
+    .datePost {
+      font-size: 1.5rem;
+
+      text-align: right;
+    }
+  }
+  .imagePosts {
+    max-width: 50%;
+    max-height: 80rem;
+
+    border-radius: 1rem;
+  }
+}

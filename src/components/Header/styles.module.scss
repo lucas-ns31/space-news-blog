@@ -1,0 +1,28 @@
+.headerContainer {
+  .headerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50rem;
+
+    h1 {
+      font: 600 5rem 'Orbitron', sans-serif;
+
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (max-width: 425px) {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
