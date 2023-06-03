@@ -11,6 +11,12 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 520px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body,
 input,
 textarea,

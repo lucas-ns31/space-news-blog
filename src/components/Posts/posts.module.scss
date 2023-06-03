@@ -28,11 +28,15 @@
 
       flex-shrink: 3;
 
+      text-align: center;
+
       letter-spacing: 1px;
     }
 
     .explanationPost {
       margin-top: 4rem;
+
+      text-align: justify;
 
       text-indent: 3rem;
     }
@@ -43,10 +47,24 @@
       text-align: right;
     }
   }
+
   .imagePosts {
     max-width: 50%;
     max-height: 80rem;
 
     border-radius: 1rem;
+  }
+
+  @media (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+
+    .contentPost {
+      width: 90%;
+    }
+
+    .imagePosts {
+      max-width: 90%;
+    }
   }
 }
