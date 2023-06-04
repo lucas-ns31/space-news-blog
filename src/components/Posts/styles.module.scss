@@ -2,7 +2,12 @@
   padding: 4rem;
 
   margin: 3rem auto;
-  max-width: 1280px;
+  max-width: 960px;
+  width: 100%;
+
+  @media (min-width: 1360px) {
+    max-width: 1280px;
+  }
 
   border-radius: 1rem;
 
@@ -39,12 +44,17 @@
       text-align: justify;
 
       text-indent: 3rem;
+
+      word-wrap: break-word;
     }
 
-    .datePost {
-      font-size: 1.5rem;
-
-      text-align: right;
+    .postFooter {
+      margin-top: 1rem;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 1.2rem;
     }
   }
 
@@ -65,6 +75,12 @@
 
     .imagePosts {
       max-width: 90%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .contentPost {
+      width: 100%;
     }
   }
 }

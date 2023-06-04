@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+
+  background: rgb(255, 48, 255);
+
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  .loading {
+    width: 300px;
+    position: relative;
+
+    display: flex;
+
+    .fire {
+      transform: rotate(-90deg);
+      margin-right: 70px;
+      z-index: 1;
+
+      opacity: 0.8;
+    }
+    .rocket {
+      transform: rotate(90deg);
+    }
+
+    img {
+      position: relative;
+
+      width: 50px;
+
+      animation-name: rocket;
+      animation-duration: 3s;
+      animation-delay: 0.5s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+
+      @keyframes rocket {
+        0% {
+          left: 0%;
+        }
+
+        100% {
+          left: 100%;
+        }
+      }
+    }
+  }
+}

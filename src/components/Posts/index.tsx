@@ -1,4 +1,6 @@
-import styles from './posts.module.scss';
+import ReactPlayer from 'react-player/youtube';
+
+import styles from './styles.module.scss';
 
 interface PostsProps {
   url: string;
@@ -6,6 +8,7 @@ interface PostsProps {
   explanation: string;
   date: string;
   media_type: string;
+  copyright: string;
 }
 
 export function Posts({
@@ -14,6 +17,7 @@ export function Posts({
   explanation,
   date,
   media_type,
+  copyright,
 }: PostsProps) {
   return (
     <>
@@ -21,9 +25,24 @@ export function Posts({
         <div className={styles.contentPost}>
           <div className={styles.descriptionPost}>{title}</div>
           <div className={styles.explanationPost}>{explanation}</div>
-          <small className={styles.datePost}>Photo Date: {date}</small>
+          <div className={styles.postFooter}>
+            <small className={styles.datePost}>Photo Date: {date}</small>
+            {copyright != null ? (
+              <small className={styles.copyright}>
+                Credit & Copyright: {copyright}
+              </small>
+            ) : undefined}
+          </div>
         </div>
-        <img src={url} alt={title} className={styles.imagePosts} />
+        {media_type === 'image' ? (
+          <img src={url} className={styles.imagePosts} alt={title} />
+        ) : (
+          <ReactPlayer
+            className={styles.imagePosts}
+            url={url}
+            controls={true}
+          />
+        )}
       </section>
     </>
   );
